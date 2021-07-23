@@ -85,3 +85,38 @@
 
 // Вывести сумму положительных чисел в массиве
 
+// const findSquares = num => {
+//     return  `${Math.pow(Math.ceil(num/2), 2)}-${Math.pow(Math.ceil(num/2), 2)-num}`
+//
+//
+// }
+// console.log(findSquares(81))
+
+
+// function sumTriangularNumbers(n) {
+//     return n < 0 ? 0 : n * (n + 1) * (n + 2) / 6;
+// }
+//
+// console.log(sumTriangularNumbers(6))
+//
+// function DNAStrand(dna){
+//   return (dna.replace(/gi"A"/, /gi"T"/)){
+//       return
+//     }
+// }
+//
+// console.log(DNAStrand("AAAA"))
+//
+// const maxRedigit = num =>{
+//    if (num >= 100 && num <1000){
+//        return +num.toString().split('').sort((a, b)=> b - a).join('')
+//    }
+//    return null
+// };
+// console.log(maxRedigit(234))
+
+function maskify(num) {
+    return num.slice(0, -4).replace(/./g, "#") + num.slice(-4);
+}
+
+console.log(maskify('789787897987979'))

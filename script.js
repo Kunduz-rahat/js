@@ -664,12 +664,114 @@
 ///// 13 july
 
 
-const findDup = (arr) => {
-    return arr.find((item, idx) => {
-        if (arr.indexOf(item) !== idx) {
-            return item
-        }
-    })
+// const findDup = (arr) => {
+//     return arr.find((item, idx) => {
+//         if (arr.indexOf(item) !== idx) {
+//             return item
+//         }
+//     })
+//
+// }
+// console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]))
 
+
+
+// 22 July
+
+
+//
+// const task = (array) => {
+//     return array.reduce((acc, item) => {
+//         if (acc[item] === undefined) {
+//             return {...acc, [item]: 1}
+//         }
+//         return {...acc, [item]: acc[item] + 1}
+//     }, {})
+// }
+// console.log(task(['a', 'a', 'a', 'c', 'b', 'b']))
+// const task1 = (array) => {
+//     return array.reduce((acc, item) => {
+//         return {...acc, [item]: (acc[item] || 0) + 1}
+//     }, {})
+// }
+// console.log(task1(['a', 'a', 'a', 'c', 'b', 'b']))
+
+/// анонимная функция////
+// (()=>{
+//     console.log('Hello')
+// })()
+
+
+// let array = [223, 54, 87, 687]   /// проверка является ли элемент массивом
+// console.log(Array.isArray(array))
+//
+// let num = NaN
+// console.log(isNaN(num))
+
+
+
+
+/// LOOPS ///// циклы
+
+
+// let numbers =[33, 44, 55]
+// for (let i=0; i< numbers.length; i++){
+//     console.log(numbers[i])
+// }
+// let numbers =[33, 44, 55]
+// for (let i=numbers.length -1; i>=0; i--){
+//     console.log(numbers[i])
+// }
+
+
+
+// let numbers = [68,98,55,45,35]
+// let sum = 0
+// for (let i= 0; i< numbers.length; i++){
+//     if (numbers[i] % 2=== 0){
+//         sum =sum + numbers[i]
+//     }
+// }
+// console.log(sum)
+
+/// альтернатива методу MAP/////
+// let numbers = [77,45, 67, 78]
+// let result =[]
+// for (let i = 0; i< numbers.length; i++){
+//     result = [...result, numbers[i] *2]
+// }
+// console.log(result)
+//
+// let array = ['K', 'a', 't', 'e']
+// let str =''
+// for (let i= 0; i<array.length; i++){
+//     str = str +array[i]
+// }
+// console.log(str)
+
+// let array = ['K', 'a', 't', 'e']
+// let str =''
+// for (let i  = array.length-1; i>=0; i--){
+//     str = str +array[i]
+// }
+// console.log(str)
+
+//
+//
+// let array = [4, 56, 67, 87, 99]
+// let max = array[0]
+// for (let i=0; i<array.length; i++){
+//     if (array[i]> max){
+//         max = array[i]
+//     }
+// }
+// console.log(max)
+
+
+let array = [45, 67, 3, 8, 2]
+for (let i =0; i<Math.floor(array.length /2); i++){
+    let temp = array[i]
+    array[i] = array[array.length -1 - i]
+    array [array.length - 1 -i] =temp
 }
-console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]))
+console.log(array)
