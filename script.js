@@ -675,7 +675,6 @@
 // console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]))
 
 
-
 // 22 July
 
 
@@ -709,8 +708,6 @@
 // console.log(isNaN(num))
 
 
-
-
 /// LOOPS ///// циклы
 
 
@@ -722,7 +719,6 @@
 // for (let i=numbers.length -1; i>=0; i--){
 //     console.log(numbers[i])
 // }
-
 
 
 // let numbers = [68,98,55,45,35]
@@ -767,11 +763,197 @@
 // }
 // console.log(max)
 
+//
+// let array = [45, 67, 3, 8, 2]
+// for (let i =0; i<Math.floor(array.length /2); i++){
+//     let temp = array[i]
+//     array[i] = array[array.length -1 - i]
+//     array [array.length - 1 -i] =temp
+// }
+// console.log(array)
 
-let array = [45, 67, 3, 8, 2]
-for (let i =0; i<Math.floor(array.length /2); i++){
-    let temp = array[i]
-    array[i] = array[array.length -1 - i]
-    array [array.length - 1 -i] =temp
-}
-console.log(array)
+
+// const task1 = str => {
+//     let result = ''
+//     let counter = 1
+//     for (let i = 0; i < str.length; i++) {
+//          if (str[i] === str[i + 1]) {
+//             counter = counter + 1
+//         } else {
+//               result = result + counter + str[i]
+//             counter = 1
+//         }
+//     }
+//     return result
+//
+// }
+// console.log(task1('TTTTHHYYDEEEEAAA'))
+
+
+// let n = 1000
+// let counter = 0
+// while (n>50){
+//     n = n/2
+//     counter = counter+1
+// }
+// console.log(counter)
+
+
+
+//// 27 july
+
+
+
+//
+// let a = 5
+// let b = a++   /// постиксинкримент
+// console.log(a)
+// console.log(b)
+
+//
+// let a = 5
+// let b = ++a   /// префиксинкримент
+// console.log(a)
+// console.log(b)
+
+
+
+
+////// Сокращения ключей в объекте
+// let fruit = "Banana"
+// let animal = "Monkey"
+//
+// let obj ={
+//     fruit,
+//     animal
+// }
+// console.log(obj)
+
+
+
+// const generateUser  = (name, id) =>{
+//     return {name, id}
+// }
+// console.log(generateUser("Adyl", 18))
+//
+// const user ={
+//     name :"Ivan",
+//     age: 35,
+//     job: "Developer",
+//     address :{
+//         city : "Naryn",
+//         street : "Lenina"
+//     }
+// }
+// console.log(user.name)
+// console.log(user.age)
+// console.log(user.address.street)
+
+
+// Деструктуризация
+// const user ={
+//     name :"Ivan",
+//     age: 35,
+//     job: "Developer",
+//     address :{
+//         city : "Naryn",
+//         street : "Lenina"
+//     }
+// }
+// const {name, age, job}=user
+// console.log(name)
+// console.log(age)
+
+
+
+// const user ={
+//     name :"Ivan",
+//     age: 35,
+//     job: "Developer",
+//     address :{
+//         city : "Naryn",
+//         street : "Lenina"
+//     }
+// }
+// const {name, age, job, address:{city, street}}=user
+// console.log(name)
+// console.log(age)
+// console.log(street)
+
+// Деструктуризация   массива
+// const animals = ["Bear", "Rabbit", "Fox"]
+// console.log(animals[0])
+// console.log(animals[1])
+// console.log(animals[2])
+//
+// const [first, second, three]= animals
+// console.log(first, second, three)
+
+/// сложение 2 массивов через спред. конкат
+// const names = ["Ivan", "Barmaley", "Mihey", "Elisey"]
+// const cities = ["Miami", "Chicago", "Kiev", "Vladimir"]
+// const result = names.concat(cities)
+// const result = [...names, ...cities]
+// console.log(result)
+
+
+
+//// REST используется в параментрах функции. и при деструктизации массивов. в остальных случаях это спред
+// const sum = (a, b , ...others)=>{
+//   console.log(others)
+//   return a+b
+// }
+// console.log(sum(1, 7, 7, 8, 9))
+//
+//
+// const names = ["Ivan", "Barmaley", "Mihey", "Elisey"]
+// const [one, two, ...others]=names
+// console.log(others)
+// console.log(one)
+
+
+//
+// const obj = {
+//   userName : "Aigerim",
+//   age : 34
+// }
+// const obj1 = {
+//   name : "Ivan",
+//   car : "Lada"
+// }
+// const composeObj = {...obj, ...obj1}
+// console.log(composeObj)
+
+
+
+// const obj = {
+//   userName : "Aigerim",
+//   age : 34
+// }
+// const obj1 = {
+//   name : "Ivan",
+//   car : "Lada"
+// }
+// const composeObj = Object.assign(obj1, obj)
+// console.log(composeObj)
+
+///// Ленивая инициализация
+// const sum =(a, b =0)=>{
+//   return a+b
+// }
+// console.log(sum(1))
+// console.log(sum(1, 6))
+//
+// const greeting = (name = 'гость') =>{
+//   return `привет, ${name}!`
+// }
+// console.log(greeting('Ivan'))
+// console.log(greeting())
+
+//// Дисктруктизация объекта, которая передается в функцию
+
+
+// const example = ({a, b}) =>{
+//   return a+ b
+// }
+// console.log(example({a:2, b : 3}))

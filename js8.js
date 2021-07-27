@@ -116,7 +116,9 @@
 
 
 
-const  task11 = (str, num) =>{
-return str.split('').reduce((acc, item) => item.length / num)
-}
-console.log(task11("petya", 2))
+// const  task11 = (str, num) =>{
+// return str.split('').reduce((acc, item) => item.length / num)
+// }
+// console.log(task11("petya", 2))
+
+
